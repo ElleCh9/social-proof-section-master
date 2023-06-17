@@ -1,0 +1,230 @@
+:root{
+   --very-dark-magenta:  hsl(300, 43%, 22%);
+   --soft-pink: hsl(333, 80%, 67%);
+   --dark-grayish-magenta: hsl(303, 10%, 53%);
+   --light-grayish-magenta: hsl(300, 24%, 96%);
+   --white: hsl(0,0%,100%);
+   --fw-4:400;
+   --fw-5:500;
+   --fw-7:700;
+}
+*{
+    box-sizing:border-box;
+    padding: 0;
+    margin:0
+   
+}
+body{
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    font-family: 'League Spartan', sans-serif;
+    font-size:15px;
+   
+}
+.sr-only{
+    width: 1px;
+    height: 1px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: hidden;
+}
+  
+header{
+    text-align: center;
+    margin:1rem;
+    width: 70%;
+   align-self: start;
+   
+    
+}
+header p{
+    margin-top: 1rem;   
+}
+footer{
+    margin-top: 2rem;
+}
+
+main{
+    background-position: bottom;
+	place-items: center;
+    text-align:center;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 50% 50%;
+   
+}
+main>div{
+    display: grid;
+}
+p{
+    font-weight: var(--fw-4);
+    color: var(--dark-grayish-magenta);
+}
+.section-one p{
+    font-weight: var(--fw-7);
+    color: var(--very-dark-magenta);
+}
+.section-two p{
+    font-weight: var(--fw-5);
+}
+h2{
+    color: var(--very-dark-magenta);
+    font-size: 3rem;
+    width: 50%;
+    place-self: center;
+    text-align: left;
+}
+.p-describe{
+    
+        place-self: center;
+        width: 50%;
+        text-align: left;
+    
+}
+section.section-two p{
+    color: var(--white);
+}
+.section-one{
+    width: 90%;
+    display: grid;
+    place-items: center;
+    place-self:flex-start;
+}
+.five-star-div {
+    background-color: var(--light-grayish-magenta);
+    padding: 0.5rem;
+    width: 70%;
+    border-radius: 10px;
+    margin-top:1rem
+}
+.five-star-div:nth-child(1){
+    place-self: flex-start;
+}
+.five-star-div:nth-child(3){
+    place-self:flex-end;
+}
+
+.section-two{
+     margin-top: 3rem;
+     grid-column-start: 1;
+     grid-column-end:  span 2;
+     display: flex;
+     flex-direction: row;
+     gap: 1rem;
+     justify-content: center;
+     height: 50vh;
+
+     
+}
+
+.card-buyer{
+    background-color: var(--very-dark-magenta );
+    margin-top: 1rem;
+    border-radius: 10px;
+    height: 250px;
+    width: 25%;
+}
+.card-buyer:nth-child(1){
+    position: relative;
+    top:-1rem;
+}
+.card-buyer:nth-child(3){
+    position: relative;
+    top:1rem;
+}
+.top-card{
+    display: flex;
+    padding: 1rem;
+    
+    
+}
+.buyer-img{
+    border-radius: 50%;
+    margin-left: 1rem;
+    width: 50px;
+    height: 50px;
+    align-self: center;
+}
+.align-text{
+    align-self: center;
+    margin-left: 1rem;
+    font-weight: var(--fw-5);
+}
+span{
+    color: var(--soft-pink);
+}
+.card-buyer p{
+    text-align: left;
+}
+
+.space-padding{
+    padding:1rem;
+}
+   
+@media screen and (max-width:1000px) {
+    .section-one{
+        place-self:center;
+    }    
+}
+@media  screen and (max-width:800px) {
+    body{
+        background: url("images/bg-pattern-top-mobile.svg") no-repeat;
+    }
+    h2{
+        font-size: 2rem;
+    }
+    main{
+        
+        flex-direction: column;
+        display:flex;
+    }
+    .section-one{
+       
+            /* width: 90%; */
+            /* justify-content: center; */
+           
+            display: flex;
+            flex-direction: column;
+            /* justify-self: center; */
+            /* justify-items: ; */
+            /* margin: 0 auto; */}
+    .five-star-div{
+        width: 90%;
+    }        
+    .five-star-div:nth-child(1){    
+      place-self: auto;
+    }
+    .five-star-div:nth-child(3){
+        place-self: auto;
+    }
+    .section-two {
+        margin-top: 3rem;
+        grid-column-start: 1;
+        grid-column-end: span 2;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        justify-content: center;
+        height: auto;
+        width: 90%;
+    }   
+    .card-buyer{
+        background-color: var(--very-dark-magenta );
+        margin-top: 1rem;
+        border-radius: 10px;
+        height: 250px;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .card-buyer:nth-child(1){
+        position: inherit;
+        
+    }
+    .card-buyer:nth-child(3){
+        position: inherit;
+       
+    }
+    }
